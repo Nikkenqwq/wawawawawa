@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Kangel.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+		
+		   #playButton {
+            background-color: #4CAF50; /* verde suave */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #playButton:hover {
+            background-color: #45a049; /* un poco más oscuro al pasar el mouse */
+        }	
+		
+        header {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0,0,0,0.5);
+            font-size: 40px;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .contenedor {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(0,0,0,0.55);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .movimiento {
+            animation: mover 4s infinite alternate;
+        }
+        @keyframes mover {
+            from {transform: translateX(-10px);} 
+            to {transform: translateX(10px);} 
+        }
+        img.moverImg {
+            width: 500px;
+            display: block;
+            margin: auto;
+            animation: flotar 3s infinite ease-in-out alternate;
+        }
+        @keyframes flotar {
+            from { transform: translateY(-10px); }
+            to { transform: translateY(10px); }
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        form {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<header class="movimiento">Needy Streamer Overload</header>
+
+<div class="contenedor">
+    <h2>¿Que es Needy Streamer Overload?</h2>
+	<p> Needy Girl Overdose, también conocido como Needy Streamer Overload, es una novela visual de temática denpa y de terror psicológico desarrollada por Xemono y publicada por WSS Playground para Mac, Microsoft Windows y Nintendo Switch. Fue lanzada el 21 de enero de 2022. El jugador asume el papel de ayudante de una streamer, tomando decisiones para que consiga su objetivo de alcanzar el millón de seguidores en un mes.</p>
+	<p> El guion del juego fue escrito por Nyalra y el arte fue realizado por Ohisashiburi. La banda sonora fue compuesta por el productor musical Aiobahn La dirección artística del juego se inspira en la estética vaporwave y el arte retro de la era del PC-98, así como los juegos bishoujo de la década de 1990. El tema principal del juego, Internet Overdose, fue interpretado por la vocalista Kotoko.</p>
+	  <button id="playButton">Reproducir música</button>
+
+    <audio id="bgMusic" src="NSO.mp3" loop></audio>
+
+    <script>
+        const audio = document.getElementById("bgMusic");
+        audio.volume = 0.2; // volumen suave
+
+        document.getElementById("playButton").onclick = () => {
+            audio.play().then(() => {
+                console.log("Reproduciendo");
+            }).catch(e => {
+                console.log("ERROR:", e);
+            });
+        };
+    </script>
+    <img class="moverImg" id="avatar" src="Kangel123.jpg" alt="Avatar de Mettajess">
+	
+	
+	<h2> Gameplay </h2>
+	
+	<p> El jugador interactúa con la protagonista Ame exclusivamente a través de una interfaz de usuario con temática pastel similar a Windows 95, seleccionando sus tareas diarias a través de íconos de escritorio, monitoreando sus estadísticas a través del Administrador de tareas y conversando con ella a través de un servicio de mensajería instantánea llamado JINE. Cada día se divide en franjas horarias de mediodía, anochecer y noche, y varias acciones pueden ocupar una o varias de estas franjas horarias. Ame solo puede transmitir en vivo durante la noche, ya que ese es el momento del día en que los espectadores de la transmisión son más activos. Durante las transmisiones en vivo de Ame, el jugador asume el papel de moderador de contenido responsable de eliminar o promover los comentarios de los espectadores dentro del chat en vivo de la transmisión. Después de transmitir o concluir varias actividades, el jugador puede vislumbrar los pensamientos y el estado de ánimo de Ame a través de sus publicaciones en Twitter.</p>
+
+    <h2>Traier de Needy Streamer Overload</h2>
+    <p>Aquí un video relacionado entre los párrafos 2 y 3 como pide el proyecto:</p>
+    <video controls src="NEEDY STREAMER OVERLOAD Launch trailer - WSS playground (720p, h264).mp4"></video>
+
+    <h2>Donaciones a OMGkawaiiAngel:</h2>
+    <form action="mailto:omgkawaiiangel1shere@gmail.com" method="post" enctype="text/plain">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" placeholder="Escribe tu nombre">
+
+        <label>Mensaje De La Donacion:</label>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
+
+        <input type="submit" value="Enviar Donacion Por Correo">
+    </form>
+	
+	    <form action="mailto:omgkawaiiangel1shere@gmail.com" method="post" enctype="text/plain">
+
+		Nombre:<br>
+        <input type="text" name="Nombre" maxlength="15"><br><br>
+
+		Personaje Favorito:<br>
+        <input type="checkbox" name="P-Chan" value="Si"> P-chan<br>
+        <input type="checkbox" name="Kangel" value="Si"> Kangel<br>
+        <input type="checkbox" name="Ame-Chan" value="Ame-chan"> Ame-chan<br><br>
+
+        ¿Porque es tu favorito?:<br>
+        <input type="text" name="Opinion Sobre El Juego" maxlength="15"><br><br>
+
+        <input type="submit" value="Enviar datos">
+        <input type="reset" value="Borrar datos">
+
+    </form>
+
+    
+</div>
+
+</body>
+</html>
